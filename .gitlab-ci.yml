@@ -23,7 +23,43 @@ build:
   stage: build
   parallel:
     matrix:
-      - PYTHON_VERSION: ["3.7", "3.8", "3.9", "3.10", "3.11", "3.7-alpine", "3.8-alpine", "3.9-alpine", "3.10-alpine", "3.11-alpine"]
+      - PYTHON_VERSION: ["3.7", "3.8", "3.9", "3.10", "3.11"]
+        POETRY_VERSION: ["1.2.2", "1.3.2", "1.4.2"] 
+  image: docker:latest
+  before_script:
+    - echo $DOCKER_HUB_KEY | docker login -u $DOCKER_HUB_USER --password-stdin
+  script:
+    - docker build --build-arg PYTHON_VERSION=$PYTHON_VERSION --build-arg POETRY_VERSION=$POETRY_VERSION -t getflow/python-poetry:$POETRY_VERSION-python$PYTHON_VERSION -t getflow/python-poetry:${POETRY_VERSION::-2}-python$PYTHON_VERSION .
+    - docker push getflow/python-poetry --all-tags 
+  after_script:
+    - docker rmi getflow/python-poetry:$POETRY_VERSION-python$PYTHON_VERSION getflow/python-poetry:${POETRY_VERSION::-2}-python$PYTHON_VERSION
+    - docker logout
+
+build-slim:
+  tags:
+    - getflow
+  stage: build
+  parallel:
+    matrix:
+      - PYTHON_VERSION: ["3.7-slim", "3.8-slim", "3.9-slim", "3.10-slim", "3.11-slim"]
+        POETRY_VERSION: ["1.2.2", "1.3.2", "1.4.2"] 
+  image: docker:latest
+  before_script:
+    - echo $DOCKER_HUB_KEY | docker login -u $DOCKER_HUB_USER --password-stdin
+  script:
+    - docker build --build-arg PYTHON_VERSION=$PYTHON_VERSION --build-arg POETRY_VERSION=$POETRY_VERSION -t getflow/python-poetry:$POETRY_VERSION-python$PYTHON_VERSION -t getflow/python-poetry:${POETRY_VERSION::-2}-python$PYTHON_VERSION .
+    - docker push getflow/python-poetry --all-tags 
+  after_script:
+    - docker rmi getflow/python-poetry:$POETRY_VERSION-python$PYTHON_VERSION getflow/python-poetry:${POETRY_VERSION::-2}-python$PYTHON_VERSION
+    - docker logout
+
+build-apline:
+  tags:
+    - getflow
+  stage: build
+  parallel:
+    matrix:
+      - PYTHON_VERSION: ["3.7-alpine", "3.8-alpine", "3.9-alpine", "3.10-alpine", "3.11-alpine"]
         POETRY_VERSION: ["1.2.2", "1.3.2", "1.4.2"] 
   image: docker:latest
   before_script:
