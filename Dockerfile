@@ -5,7 +5,7 @@ FROM python:$PYTHON_VERSION
 ARG POETRY_VERSION
 
 ENV POETRY_HOME=/opt/poetry
-ENV PATH=${PATH}:$POETRY_HOME
+ENV PATH=${PATH}:$POETRY_HOME/bin
 ENV POETRY_VERSION=$POETRY_VERSION
 
 RUN curl -sSL https://install.python-poetry.org | python3 -
