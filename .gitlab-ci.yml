@@ -78,7 +78,41 @@ build-stable:
   image: docker:latest
   parallel:
     matrix:
-      - PYTHON_VERSION: ["3.7", "3.8", "3.9", "3.10", "3.11", "3.7-alpine", "3.8-alpine", "3.9-alpine", "3.10-alpine", "3.11-alpine"]
+      - PYTHON_VERSION: ["3.7", "3.8", "3.9", "3.10", "3.11"]
+  before_script:
+    - echo $DOCKER_HUB_KEY | docker login -u $DOCKER_HUB_USER --password-stdin
+  script:
+    - docker build --build-arg PYTHON_VERSION=$PYTHON_VERSION -t getflow/python-poetry:stable-python$PYTHON_VERSION .
+    - docker push getflow/python-poetry --all-tags
+  after_script:
+    - docker rmi getflow/python-poetry:stable-python$PYTHON_VERSION
+    - docker logout
+
+build-stable-slim:
+  tags:
+    - getflow
+  stage: build
+  image: docker:latest
+  parallel:
+    matrix:
+      - PYTHON_VERSION: ["3.7-slim", "3.8-slim", "3.9-slim", "3.10-slim", "3.11-slim"]
+  before_script:
+    - echo $DOCKER_HUB_KEY | docker login -u $DOCKER_HUB_USER --password-stdin
+  script:
+    - docker build --build-arg PYTHON_VERSION=$PYTHON_VERSION -t getflow/python-poetry:stable-python$PYTHON_VERSION .
+    - docker push getflow/python-poetry --all-tags
+  after_script:
+    - docker rmi getflow/python-poetry:stable-python$PYTHON_VERSION
+    - docker logout
+
+build-stable-alpine:
+  tags:
+    - getflow
+  stage: build
+  image: docker:latest
+  parallel:
+    matrix:
+      - PYTHON_VERSION: ["3.7-alpine", "3.8-alpine", "3.9-alpine", "3.10-alpine", "3.11-alpine"]
   before_script:
     - echo $DOCKER_HUB_KEY | docker login -u $DOCKER_HUB_USER --password-stdin
   script:
