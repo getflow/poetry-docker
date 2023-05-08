@@ -6,7 +6,7 @@
 
 # Usage
 
-To run poetry use command: `$POETRY_HOME/bin/poetry`
+To run poetry use command: `$POETRY_HOME/bin/poetry` or simply `poetry`
 
 ## Example
 
