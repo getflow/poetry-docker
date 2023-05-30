@@ -29,7 +29,7 @@ build:
   before_script:
     - echo $DOCKER_HUB_KEY | docker login -u $DOCKER_HUB_USER --password-stdin
   script:
-    - docker build --build-arg PYTHON_VERSION=$PYTHON_VERSION --build-arg POETRY_VERSION=$POETRY_VERSION -t getflow/python-poetry:$POETRY_VERSION-python$PYTHON_VERSION -t getflow/python-poetry:${POETRY_VERSION::-2}-python$PYTHON_VERSION .
+    - docker build --build-arg PYTHON_VERSION=$PYTHON_VERSION --build-arg POETRY_VERSION=$POETRY_VERSION -t getflow/python-poetry:$POETRY_VERSION-python$PYTHON_VERSION -t getflow/python-poetry:${POETRY_VERSION::-2}-python$PYTHON_VERSION -f Dockerfile.debian .
     - docker push getflow/python-poetry --all-tags 
   after_script:
     - docker rmi getflow/python-poetry:$POETRY_VERSION-python$PYTHON_VERSION getflow/python-poetry:${POETRY_VERSION::-2}-python$PYTHON_VERSION
@@ -47,7 +47,7 @@ build-slim:
   before_script:
     - echo $DOCKER_HUB_KEY | docker login -u $DOCKER_HUB_USER --password-stdin
   script:
-    - docker build --build-arg PYTHON_VERSION=$PYTHON_VERSION --build-arg POETRY_VERSION=$POETRY_VERSION -t getflow/python-poetry:$POETRY_VERSION-python$PYTHON_VERSION -t getflow/python-poetry:${POETRY_VERSION::-2}-python$PYTHON_VERSION .
+    - docker build --build-arg PYTHON_VERSION=$PYTHON_VERSION --build-arg POETRY_VERSION=$POETRY_VERSION -t getflow/python-poetry:$POETRY_VERSION-python$PYTHON_VERSION -t getflow/python-poetry:${POETRY_VERSION::-2}-python$PYTHON_VERSION -f Dockerfile.debian .
     - docker push getflow/python-poetry --all-tags 
   after_script:
     - docker rmi getflow/python-poetry:$POETRY_VERSION-python$PYTHON_VERSION getflow/python-poetry:${POETRY_VERSION::-2}-python$PYTHON_VERSION
@@ -65,7 +65,7 @@ build-apline:
   before_script:
     - echo $DOCKER_HUB_KEY | docker login -u $DOCKER_HUB_USER --password-stdin
   script:
-    - docker build --build-arg PYTHON_VERSION=$PYTHON_VERSION --build-arg POETRY_VERSION=$POETRY_VERSION -t getflow/python-poetry:$POETRY_VERSION-python$PYTHON_VERSION -t getflow/python-poetry:${POETRY_VERSION::-2}-python$PYTHON_VERSION .
+    - docker build --build-arg PYTHON_VERSION=$PYTHON_VERSION --build-arg POETRY_VERSION=$POETRY_VERSION -t getflow/python-poetry:$POETRY_VERSION-python$PYTHON_VERSION -t getflow/python-poetry:${POETRY_VERSION::-2}-python$PYTHON_VERSION -f Dockerfile.alpine .
     - docker push getflow/python-poetry --all-tags 
   after_script:
     - docker rmi getflow/python-poetry:$POETRY_VERSION-python$PYTHON_VERSION getflow/python-poetry:${POETRY_VERSION::-2}-python$PYTHON_VERSION
@@ -82,7 +82,7 @@ build-stable:
   before_script:
     - echo $DOCKER_HUB_KEY | docker login -u $DOCKER_HUB_USER --password-stdin
   script:
-    - docker build --build-arg PYTHON_VERSION=$PYTHON_VERSION -t getflow/python-poetry:stable-python$PYTHON_VERSION .
+    - docker build --build-arg PYTHON_VERSION=$PYTHON_VERSION -t getflow/python-poetry:stable-python$PYTHON_VERSION -f Dockerfile.debian .
     - docker push getflow/python-poetry --all-tags
   after_script:
     - docker rmi getflow/python-poetry:stable-python$PYTHON_VERSION
@@ -99,7 +99,7 @@ build-stable-slim:
   before_script:
     - echo $DOCKER_HUB_KEY | docker login -u $DOCKER_HUB_USER --password-stdin
   script:
-    - docker build --build-arg PYTHON_VERSION=$PYTHON_VERSION -t getflow/python-poetry:stable-python$PYTHON_VERSION .
+    - docker build --build-arg PYTHON_VERSION=$PYTHON_VERSION -t getflow/python-poetry:stable-python$PYTHON_VERSION -f Dockerfile.debian .
     - docker push getflow/python-poetry --all-tags
   after_script:
     - docker rmi getflow/python-poetry:stable-python$PYTHON_VERSION
@@ -116,7 +116,7 @@ build-stable-alpine:
   before_script:
     - echo $DOCKER_HUB_KEY | docker login -u $DOCKER_HUB_USER --password-stdin
   script:
-    - docker build --build-arg PYTHON_VERSION=$PYTHON_VERSION -t getflow/python-poetry:stable-python$PYTHON_VERSION .
+    - docker build --build-arg PYTHON_VERSION=$PYTHON_VERSION -t getflow/python-poetry:stable-python$PYTHON_VERSION -f Dockerfile.alpine .
     - docker push getflow/python-poetry --all-tags
   after_script:
     - docker rmi getflow/python-poetry:stable-python$PYTHON_VERSION
@@ -130,7 +130,7 @@ build-latest:
   before_script:
     - echo $DOCKER_HUB_KEY | docker login -u $DOCKER_HUB_USER --password-stdin
   script:
-    - docker build -t getflow/python-poetry:latest .
+    - docker build -t getflow/python-poetry:latest -f Dockerfile.debian .
     - docker push getflow/python-poetry --all-tags
   after_script:
     - docker rmi getflow/python-poetry:latest
