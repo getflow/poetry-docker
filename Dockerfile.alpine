@@ -10,4 +10,4 @@ ENV POETRY_VERSION=$POETRY_VERSION
 
 RUN apk add --no-cache --virtual gcc libc-dev libffi-dev && \
     python3 -m venv $POETRY_HOME && $POETRY_HOME/bin/pip install poetry==$POETRY_VERSION && \
-    apk remove gcc libc-dev libffi-dev
+    apk del gcc libc-dev libffi-dev
