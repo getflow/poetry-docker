@@ -8,6 +8,6 @@ ENV POETRY_HOME=/opt/poetry
 ENV PATH=${PATH}:$POETRY_HOME/bin
 ENV POETRY_VERSION=$POETRY_VERSION
 
-RUN apk add --no-cache gcc libc-dev libffi-dev && \
-    python3 -m venv $POETRY_HOME && $POETRY_HOME/bin/pip install poetry==$POETRY_VERSION && \
-    apk del gcc libc-dev libffi-dev
+RUN apk add --no-cache gcc libc-dev libffi-dev curl && \
+    curl -sSL https://install.python-poetry.org | python3 - && \
+    apk del gcc libc-dev libffi-dev curl
