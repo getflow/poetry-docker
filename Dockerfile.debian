@@ -12,5 +12,4 @@ ENV POETRY_VERSION=$POETRY_VERSION
 RUN apt-get update && \
     apt-get install -y curl gcc libc-dev libffi-dev && \
     rm -rf /var/lib/apt/lists/* && \
-    curl -sSL https://install.python-poetry.org | python3 - && \
-    apt-get remove -y gcc libc-dev libffi-dev
+    curl -sSL https://install.python-poetry.org | python3 -
