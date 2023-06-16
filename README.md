@@ -6,6 +6,11 @@
 
 [Poetry](https://python-poetry.org) is a tool for dependency management and packaging in [Python](https://www.python.org). This repository provides a container images for different [supported stable versions of Python](https://devguide.python.org/versions/) with [Poetry](https://python-poetry.org) preinstalled.
 
+## Links
+
+- Image on DockerHub: https://hub.docker.com/r/getflow/python-poetry
+- Sources: https://github.com/getflow/poetry-docker
+
 ## Usage
 
 To run poetry use command: `$POETRY_HOME/bin/poetry` or simply `poetry`
