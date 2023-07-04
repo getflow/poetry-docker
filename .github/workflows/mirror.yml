@@ -8,8 +8,8 @@ jobs:
     container:
       image: getflow/cloudflared-ssh:latest
       env:
-        - TOKEN_ID: ${{ secrets.CLOUDFLARE_TOKEN_ID }}
-        - TOKEN_SECRET: ${{ secrets.CLOUDFLARE_TOKEN_SECRET }}
+        TOKEN_ID: ${{ secrets.CLOUDFLARE_TOKEN_ID }}
+        TOKEN_SECRET: ${{ secrets.CLOUDFLARE_TOKEN_SECRET }}
     steps:                                              # <-- must use actions/checkout before mirroring!
       - uses: actions/checkout@v2
         with:
