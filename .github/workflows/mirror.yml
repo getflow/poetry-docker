@@ -18,5 +18,6 @@ jobs:
         run: echo "${{ secrets.GITLAB_MIRROR_BOT_KEY }}" > /root/.ssh/id_rsa
       - name: Push to mirror
         run: |
+          git config --global --add safe.directory .
           git remote add mirror "${{ secrets.GITLAB_MIRROR_REPOSITORY }}"
           git push --tags --force --prune mirror "refs/remotes/origin/*:refs/heads/*"
