@@ -11,13 +11,12 @@ jobs:
         TOKEN_ID: ${{ secrets.CLOUDFLARE_TOKEN_ID }}
         TOKEN_SECRET: ${{ secrets.CLOUDFLARE_TOKEN_SECRET }}
     steps:                                              # <-- must use actions/checkout before mirroring!
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3.5.3
         with:
           fetch-depth: 0
       - name: Setup ssh
         run: echo "${{ secrets.GITLAB_MIRROR_BOT_KEY }}" > /root/.ssh/id_rsa
       - name: Push to mirror
         run: |
-          git config --global --add safe.directory .
           git remote add mirror "${{ secrets.GITLAB_MIRROR_REPOSITORY }}"
           git push --tags --force --prune mirror "refs/remotes/origin/*:refs/heads/*"
