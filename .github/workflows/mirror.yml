@@ -15,7 +15,9 @@ jobs:
         with:
           fetch-depth: 0
       - name: Setup ssh
-        run: echo "${{ secrets.GITLAB_MIRROR_BOT_KEY }}" > /root/.ssh/id_rsa
+        run: |
+          echo "${{ secrets.GITLAB_MIRROR_BOT_KEY }}" > /root/.ssh/id_rsa
+          chmod 600 /root/.ssh/id_rsa
       - name: Push to mirror
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
