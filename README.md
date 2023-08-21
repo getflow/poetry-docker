@@ -36,7 +36,6 @@ RUN $POETRY_HOME/bin/poetry config virtualenvs.create false && $POETRY_HOME/bin/
 <details>
 <summary>stable</summary>
 
-  - stable-python3.7, stable-python3.7-slim, stable-python3.7-alpine
   - stable-python3.8, stable-python3.8-slim, stable-python3.8-alpine
   - stable-python3.9, stable-python3.9-slim, stable-python3.9-alpine
   - stable-python3.10, stable-python3.10-slim, stable-python3.10-alpine
@@ -47,7 +46,6 @@ RUN $POETRY_HOME/bin/poetry config virtualenvs.create false && $POETRY_HOME/bin/
 <details>
 <summary>1.6</summary>
 
-  - 1.6-python3.7, 1.6-python3.7-slim, 1.6-python3.7-alpine
   - 1.6-python3.8, 1.6-python3.8-slim, 1.6-python3.8-alpine
   - 1.6-python3.9, 1.6-python3.9-slim, 1.6-python3.9-alpine
   - 1.6-python3.10, 1.6-python3.10-slim, 1.6-python3.10-alpine
@@ -58,7 +56,6 @@ RUN $POETRY_HOME/bin/poetry config virtualenvs.create false && $POETRY_HOME/bin/
 <details>
 <summary>1.5</summary>
 
-  - 1.5-python3.7, 1.5-python3.7-slim, 1.5-python3.7-alpine
   - 1.5-python3.8, 1.5-python3.8-slim, 1.5-python3.8-alpine
   - 1.5-python3.9, 1.5-python3.9-slim, 1.5-python3.9-alpine
   - 1.5-python3.10, 1.5-python3.10-slim, 1.5-python3.10-alpine
@@ -69,7 +66,6 @@ RUN $POETRY_HOME/bin/poetry config virtualenvs.create false && $POETRY_HOME/bin/
 <details>
 <summary>1.4</summary>
 
-  - 1.4-python3.7, 1.4-python3.7-slim, 1.4-python3.7-alpine
   - 1.4-python3.8, 1.4-python3.8-slim, 1.4-python3.8-alpine
   - 1.4-python3.9, 1.4-python3.9-slim, 1.4-python3.9-alpine
   - 1.4-python3.10, 1.4-python3.10-slim, 1.4-python3.10-alpine
@@ -80,7 +76,6 @@ RUN $POETRY_HOME/bin/poetry config virtualenvs.create false && $POETRY_HOME/bin/
 <details>
 <summary>1.3</summary>
 
-  - 1.3-python3.7, 1.3-python3.7-slim, 1.3-python3.7-alpine
   - 1.3-python3.8, 1.3-python3.8-slim, 1.3-python3.8-alpine
   - 1.3-python3.9, 1.3-python3.9-slim, 1.3-python3.9-alpine
   - 1.3-python3.10, 1.3-python3.10-slim, 1.3-python3.10-alpine
@@ -91,7 +86,6 @@ RUN $POETRY_HOME/bin/poetry config virtualenvs.create false && $POETRY_HOME/bin/
 <details>
 <summary>1.2</summary>
 
-  - 1.2-python3.7, 1.2-python3.7-slim, 1.2-python3.7-alpine
   - 1.2-python3.8, 1.2-python3.8-slim, 1.2-python3.8-alpine
   - 1.2-python3.9, 1.2-python3.9-slim, 1.2-python3.9-alpine
   - 1.2-python3.10, 1.2-python3.10-slim, 1.2-python3.10-alpine
