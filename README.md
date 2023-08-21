@@ -30,7 +30,7 @@ RUN $POETRY_HOME/bin/poetry config virtualenvs.create false && $POETRY_HOME/bin/
 <details>
 <summary>latest</summary>
 
-  - 1.5-python3.11, latest
+  - 1.6-python3.11, latest
   
 </details>
 <details>
@@ -42,6 +42,17 @@ RUN $POETRY_HOME/bin/poetry config virtualenvs.create false && $POETRY_HOME/bin/
   - stable-python3.10, stable-python3.10-slim, stable-python3.10-alpine
   - stable-python3.11, stable-python3.11-slim, stable-python3.11-alpine
   - stable-python3.12-rc, stable-python3.12-rc-slim, stable-python3.12-rc-alpine
+  
+</details>
+<details>
+<summary>1.6</summary>
+
+  - 1.6-python3.7, 1.6-python3.7-slim, 1.6-python3.7-alpine
+  - 1.6-python3.8, 1.6-python3.8-slim, 1.6-python3.8-alpine
+  - 1.6-python3.9, 1.6-python3.9-slim, 1.6-python3.9-alpine
+  - 1.6-python3.10, 1.6-python3.10-slim, 1.6-python3.10-alpine
+  - 1.6-python3.11, 1.6-python3.11-slim, 1.6-python3.11-alpine
+  - 1.6-python3.12-rc, 1.6-python3.12-rc-slim, 1.6-python3.12-rc-alpine
   
 </details>
 <details>
