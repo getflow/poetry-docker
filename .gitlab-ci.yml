@@ -95,7 +95,7 @@ build-stable-slim:
   image: docker:latest
   parallel:
     matrix:
-      - PYTHON_VERSION: ["3.7-slim", "3.8-slim", "3.9-slim", "3.10-slim", "3.11-slim"]
+      - PYTHON_VERSION: ["3.8-slim", "3.9-slim", "3.10-slim", "3.11-slim"]
   before_script:
     - echo $DOCKER_HUB_KEY | docker login -u $DOCKER_HUB_USER --password-stdin
   script:
