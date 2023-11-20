@@ -36,7 +36,6 @@ RUN $POETRY_HOME/bin/poetry config virtualenvs.create false && $POETRY_HOME/bin/
 <details>
 <summary>stable</summary>
 
-  - stable-python3.8, stable-python3.8-slim, stable-python3.8-alpine
   - stable-python3.9, stable-python3.9-slim, stable-python3.9-alpine
   - stable-python3.10, stable-python3.10-slim, stable-python3.10-alpine
   - stable-python3.11, stable-python3.11-slim, stable-python3.11-alpine
@@ -46,7 +45,6 @@ RUN $POETRY_HOME/bin/poetry config virtualenvs.create false && $POETRY_HOME/bin/
 <details>
 <summary>1.6</summary>
 
-  - 1.6-python3.8, 1.6-python3.8-slim, 1.6-python3.8-alpine
   - 1.6-python3.9, 1.6-python3.9-slim, 1.6-python3.9-alpine
   - 1.6-python3.10, 1.6-python3.10-slim, 1.6-python3.10-alpine
   - 1.6-python3.11, 1.6-python3.11-slim, 1.6-python3.11-alpine
@@ -56,43 +54,13 @@ RUN $POETRY_HOME/bin/poetry config virtualenvs.create false && $POETRY_HOME/bin/
 <details>
 <summary>1.5</summary>
 
-  - 1.5-python3.8, 1.5-python3.8-slim, 1.5-python3.8-alpine
   - 1.5-python3.9, 1.5-python3.9-slim, 1.5-python3.9-alpine
   - 1.5-python3.10, 1.5-python3.10-slim, 1.5-python3.10-alpine
   - 1.5-python3.11, 1.5-python3.11-slim, 1.5-python3.11-alpine
   - 1.5-python3.12-rc, 1.5-python3.12-rc-slim, 1.5-python3.12-rc-alpine
   
 </details>
-<details>
-<summary>1.4</summary>
 
-  - 1.4-python3.8, 1.4-python3.8-slim, 1.4-python3.8-alpine
-  - 1.4-python3.9, 1.4-python3.9-slim, 1.4-python3.9-alpine
-  - 1.4-python3.10, 1.4-python3.10-slim, 1.4-python3.10-alpine
-  - 1.4-python3.11, 1.4-python3.11-slim, 1.4-python3.11-alpine
-  - 1.4-python3.12-rc, 1.4-python3.12-rc-slim, 1.4-python3.12-rc-alpine
-  
-</details>
-<details>
-<summary>1.3</summary>
-
-  - 1.3-python3.8, 1.3-python3.8-slim, 1.3-python3.8-alpine
-  - 1.3-python3.9, 1.3-python3.9-slim, 1.3-python3.9-alpine
-  - 1.3-python3.10, 1.3-python3.10-slim, 1.3-python3.10-alpine
-  - 1.3-python3.11, 1.3-python3.11-slim, 1.3-python3.11-alpine
-  - 1.3-python3.12-rc, 1.3-python3.12-rc-slim, 1.3-python3.12-rc-alpine
-  
-</details>
-<details>
-<summary>1.2</summary>
-
-  - 1.2-python3.8, 1.2-python3.8-slim, 1.2-python3.8-alpine
-  - 1.2-python3.9, 1.2-python3.9-slim, 1.2-python3.9-alpine
-  - 1.2-python3.10, 1.2-python3.10-slim, 1.2-python3.10-alpine
-  - 1.2-python3.11, 1.2-python3.11-slim, 1.2-python3.11-alpine
-  - 1.2-python3.12-rc, 1.2-python3.12-rc-slim, 1.2-python3.12-rc-alpine
-
-</details>
 
 ## Contact
 
