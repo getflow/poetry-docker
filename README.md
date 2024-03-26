@@ -82,8 +82,6 @@ RUN $POETRY_HOME/bin/poetry config virtualenvs.create false && $POETRY_HOME/bin/
 </details>
 
 
-## Unsupported tags
-
 <details>
 <summary>Unsupported tags</summary>
 
