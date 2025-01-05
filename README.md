@@ -30,7 +30,7 @@ RUN $POETRY_HOME/bin/poetry config virtualenvs.create false && $POETRY_HOME/bin/
 <details>
 <summary>latest</summary>
 
-  - 1.8-python3.13, latest
+  - 2.0-python3.13, stable-python3.13, latest
   
 </details>
 <details>
