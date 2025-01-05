@@ -45,6 +45,17 @@ RUN $POETRY_HOME/bin/poetry config virtualenvs.create false && $POETRY_HOME/bin/
 </details>
 
 <details>
+<summary>2.0</summary>
+
+  - 2.0-python3.9, 2.0-python3.9-slim, 2.0-python3.9-alpine
+  - 2.0-python3.10, 2.0-python3.10-slim, 2.0-python3.10-alpine
+  - 2.0-python3.11, 2.0-python3.11-slim, 2.0-python3.11-alpine
+  - 2.0-python3.12, 2.0-python3.12-slim, 2.0-python3.12-alpine
+  - 2.0-python3.13, 2.0-python3.13-slim, 2.0-python3.13-alpine
+  
+</details>
+
+<details>
 <summary>1.8</summary>
 
   - 1.8-python3.9, 1.8-python3.9-slim, 1.8-python3.9-alpine
