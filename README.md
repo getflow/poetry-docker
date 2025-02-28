@@ -30,7 +30,7 @@ RUN $POETRY_HOME/bin/poetry config virtualenvs.create false && $POETRY_HOME/bin/
 <details>
 <summary>latest</summary>
 
-  - 2.0-python3.13, stable-python3.13, latest
+  - 2.1-python3.13, stable-python3.13, latest
   
 </details>
 <details>
@@ -45,13 +45,13 @@ RUN $POETRY_HOME/bin/poetry config virtualenvs.create false && $POETRY_HOME/bin/
 </details>
 
 <details>
-<summary>2.0</summary>
+<summary>2.1</summary>
 
-  - 2.0-python3.9, 2.0-python3.9-slim, 2.0-python3.9-alpine
-  - 2.0-python3.10, 2.0-python3.10-slim, 2.0-python3.10-alpine
-  - 2.0-python3.11, 2.0-python3.11-slim, 2.0-python3.11-alpine
-  - 2.0-python3.12, 2.0-python3.12-slim, 2.0-python3.12-alpine
-  - 2.0-python3.13, 2.0-python3.13-slim, 2.0-python3.13-alpine
+  - 2.1-python3.9, 2.1-python3.9-slim, 2.1-python3.9-alpine
+  - 2.1-python3.10, 2.1-python3.10-slim, 2.1-python3.10-alpine
+  - 2.1-python3.11, 2.1-python3.11-slim, 2.1-python3.11-alpine
+  - 2.1-python3.12, 2.1-python3.12-slim, 2.1-python3.12-alpine
+  - 2.1-python3.13, 2.1-python3.13-slim, 2.1-python3.13-alpine
   
 </details>
 
@@ -63,17 +63,6 @@ RUN $POETRY_HOME/bin/poetry config virtualenvs.create false && $POETRY_HOME/bin/
   - 1.8-python3.11, 1.8-python3.11-slim, 1.8-python3.11-alpine
   - 1.8-python3.12, 1.8-python3.12-slim, 1.8-python3.12-alpine
   - 1.8-python3.13, 1.8-python3.13-slim, 1.8-python3.13-alpine
-  
-</details>
-
-<details>
-<summary>1.7</summary>
-
-  - 1.7-python3.9, 1.7-python3.9-slim, 1.7-python3.9-alpine
-  - 1.7-python3.10, 1.7-python3.10-slim, 1.7-python3.10-alpine
-  - 1.7-python3.11, 1.7-python3.11-slim, 1.7-python3.11-alpine
-  - 1.7-python3.12, 1.7-python3.12-slim, 1.7-python3.12-alpine
-  - 1.7-python3.13, 1.7-python3.13-slim, 1.7-python3.13-alpine
   
 </details>
 
@@ -91,6 +80,16 @@ RUN $POETRY_HOME/bin/poetry config virtualenvs.create false && $POETRY_HOME/bin/
   - 1.6-python3.10, 1.6-python3.10-slim, 1.6-python3.10-alpine
   - 1.6-python3.11, 1.6-python3.11-slim, 1.6-python3.11-alpine
   - 1.6-python3.12, 1.6-python3.12-slim, 1.6-python3.12-alpine
+  - 1.7-python3.9, 1.7-python3.9-slim, 1.7-python3.9-alpine
+  - 1.7-python3.10, 1.7-python3.10-slim, 1.7-python3.10-alpine
+  - 1.7-python3.11, 1.7-python3.11-slim, 1.7-python3.11-alpine
+  - 1.7-python3.12, 1.7-python3.12-slim, 1.7-python3.12-alpine
+  - 1.7-python3.13, 1.7-python3.13-slim, 1.7-python3.13-alpine
+  - 2.0-python3.9, 2.0-python3.9-slim, 2.0-python3.9-alpine
+  - 2.0-python3.10, 2.0-python3.10-slim, 2.0-python3.10-alpine
+  - 2.0-python3.11, 2.0-python3.11-slim, 2.0-python3.11-alpine
+  - 2.0-python3.12, 2.0-python3.12-slim, 2.0-python3.12-alpine
+  - 2.0-python3.13, 2.0-python3.13-slim, 2.0-python3.13-alpine
   
 </details>
 
