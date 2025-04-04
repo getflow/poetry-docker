@@ -2,6 +2,8 @@
 
 # Poetry
 
+[![](https://badgen.net/docker/pulls/getflow/python-poetry)](https://hub.docker.com/r/getflow/python-poetry)
+
 ## About
 
 [Poetry](https://python-poetry.org) is a tool for dependency management and packaging in [Python](https://www.python.org). This repository provides a container images for different [supported stable versions of Python](https://devguide.python.org/versions/) with [Poetry](https://python-poetry.org) preinstalled.
